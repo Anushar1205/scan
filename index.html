@@ -1,7 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+<head><!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-   <script data-relyance-consent-appId="app-29a1905e-1210-5bc1-9e3f-3341efa9bfc0" data-relyance-consent-scriptBlocking="true" src="https://consent.app.relyancestage.xyz/relyance-agent.js"></script>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Website</title>
+
+    <script type="text/javascript">
+
+        (function() {
+
+            /**
+
+             * Consent Agent Script Loader
+
+             *
+
+             * This script dynamically loads the consent agent script based on the presence
+
+             * of a specific query parameter in the URL.
+
+             *
+
+             * To test the consent agent, append `?loadConsentAgent=true` to your URL.
+
+             * Example: `https://yourwebsite.com/yourpage.html?loadConsentAgent=true`
+
+             *
+
+             * The consent agent script will only be loaded when this query parameter is present.
+
+             */
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const loadConsentAgent = urlParams.get('loadConsentAgent');
+
+            if (loadConsentAgent === 'true') {
+
+                console.log('Consent Agent loading initiated by query parameter.');
+
+                // Create the script element
+
+                const consentScript = document.createElement('script');
+
+                consentScript.type = 'text/javascript';
+
+                                consentScript.src = https://consent.app.relyancestage.xyz/relyance-agent.js; // *** IMPORTANT: REPLACE WITH YOUR ACTUAL SCRIPT URL ***
+
+                // Optional: Add an onload event listener for debugging
+
+                consentScript.onload = () => {
+
+                    console.log('Consent Agent script loaded successfully!');
+
+                    // You might want to trigger a function here that initializes your consent agent
+
+                    // if it doesn't auto-initialize on script load.
+
+                    // For example: if (window.myConsentAgent) { window.myConsentAgent.init(); }
+
+                };
+
+                consentScript.onerror = () => {
+
+                    console.error('Failed to load Consent Agent script!');
+
+                };
+
+                // Append the script to the head of the document
+
+                document.head.appendChild(consentScript);
+
+            } else {
+
+                console.log('Consent Agent not loaded (query parameter not present or not "true").');
+
+            }
+
+        })();
+
+    </script>
+
+    </head>
+
+<body>
+
+    </body>
+
+</html>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracking Monitor Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
